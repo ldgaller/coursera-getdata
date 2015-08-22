@@ -1,4 +1,4 @@
-# coursera-getdata
+# coursera-getdata Programming Assignmet `run_analysis.R`
 Coursera Getting and Cleansing Data course project. 
 This repository contains R code that downloads and does some preprocessing on Human
 Activity Recognition data set. The full description and the data can be found
