@@ -5,7 +5,7 @@ date: "August 21, 2015"
 output: html_document
 ---
 
-# Getting & Cleansing Data Programming Assignment 2
+# Getting & Cleansing Data Programming Assignment
 
 ## Introduction  
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.   
