@@ -27,17 +27,36 @@ __The script__ *`run_analysis.R`* accomplishes the following tasks:
   
 ## run_analysis.R
 
-The script is parititioned into functions such that each function performs one of the
-steps described above. To run whole cleaning procedure, call *`clean.data`*
-function. The script also assumes that `plyr` library is already installed.
+The script is comprised of 6 functions with each function performing one of the
+steps described above. To run entire cleaning process, call the *`clean.data`*
+function. The script also utilizes the `plyr` library and requires that it has already 
+been installed.
 
 ## The original data set
 
+The original dataset is sourced from the Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.  
+
 The original data set is split into training and test sets (70% and 30%,
-respectively) where each partition is also split into three files that contain
+respectively) where each partition is also split into three files that contain  
 - measurements from the accelerometer and gyroscope
 - activity label
 - identifier of the subject
+   
+### Dataset Charactoristics: 
+- Multivariate, Time Series
+- 10299 Instance
+- 561 Attributes
+- Missing values N/A
+
+### Attribute Information:
+- For each record in the dataset it is provided: 
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+
 
 ###The dataset includes the following files: 
 'README.txt' - 'features_info.txt': Shows information about the variables used on the feature vector. 
