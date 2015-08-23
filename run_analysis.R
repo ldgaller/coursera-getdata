@@ -3,6 +3,7 @@
 # from recordings of subjects performing daily activities while carrying               #
 # smartphone. The full description of the data set is available at:                    #
 # http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  #
+########################################################################################
 
 ##########################################################
 # plyr: Tools for Splitting, Applying and Combining Data #
@@ -55,7 +56,7 @@ merge.datasets = function() {
 ##########################################################
 # Extract measures for mean and std deviations           #
 ##########################################################
-extract.mean.and.std = function(df) {
+extract.attributes = function(df) {
     # Given the dataset (x values), extract only the measurements on the mean
     # and standard deviation for each measurement.
 
@@ -111,7 +112,7 @@ clean.data = function() {
     merged <- merge.datasets()
     # Extract only the measurements of the mean and standard deviation for each
     # measurement
-    cx <- extract.mean.and.std(merged$x)
+    cx <- extract.attributes(merged$x)
     # Name activities
     cy <- name.activities(merged$y)
     # Use descriptive column name for subjects
