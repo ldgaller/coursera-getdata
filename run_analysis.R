@@ -3,6 +3,8 @@
 # from recordings of 30 subjects performing daily activities while carrying            #
 # smartphone. The full description of the data set is available at:                    #
 # http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  #
+# This code was designed to run on a windows PC add the method="curl" to the download  #
+# file if running an a MAC                                                             #
 ########################################################################################
 
 ##########################################################
@@ -23,7 +25,10 @@ download.data = function() {
         fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
         zipfile="data/UCI_HAR_data.zip"
         message("Downloading data")
-        download.file(fileURL, destfile=zipfile, method="curl")
+        #Windows
+        download.file(fileURL, destfile=zipfile)
+        #mac
+        #download.file(fileURL, destfile=zipfile, method="curl")
         unzip(zipfile, exdir="data")
     }
 }
@@ -59,7 +64,7 @@ merge.datasets = function() {
 extract.attributes = function(df) {
     # Given the dataset (x values), extract only the measurements on the mean
     # and standard deviation for each measurement.
-
+    
     # Read the feature list file
     features <- read.table("data/UCI HAR Dataset/features.txt")
     # Find the mean and std columns
