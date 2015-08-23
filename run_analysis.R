@@ -1,6 +1,6 @@
 ########################################################################################
-# This R script gets and performs some cleaning on human activity data, built          #
-# from recordings of subjects performing daily activities while carrying               #
+# This R script gets and downloads, merges and cleanses the human activity data, built #
+# from recordings of 30 subjects performing daily activities while carrying            #
 # smartphone. The full description of the data set is available at:                    #
 # http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  #
 ########################################################################################
